@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ ~ Imports needed for JavaFX
+ -->
+<!--
+ ~ Root element is a GridPane
+ ~ Uses the JavaFx namespaces
+ ~ Defines the controller to be Draw.Parameters controller
+ ~ Gives the root element an ID so as to get its controller object
+ ~
+ -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Draw.ParametersController">
+    <!--
+     ~ Column constraints to prevent code duplication
+     ~ Despite window being fixed width, growth is still specified as a best practice.
+     ~ Sets the alignment to be center
+     -->
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <!--
+     ~ Row constraints to prevent code duplication
+     ~ Despite window being fixed with, growth is still specified as a best practice.
+     ~ Sets the alignment to be center.
+     -->
+    <rowConstraints>
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <!--
+     ~ Label for length.
+     ~ Position (0,0), Span (1,1)
+     -->
+    <Label text="Select Length"
+           GridPane.columnIndex="0" GridPane.columnSpan="1"
+           GridPane.rowIndex="0" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for length
+     ~ ID: length
+     ~ Position: (0,1)
+     ~ Span: (1,4)
+     -->
+    <TextField fx:id="length"
+               GridPane.columnIndex="1" GridPane.columnSpan="4"
+               GridPane.rowIndex="0" GridPane.rowSpan="1"/>
+    <!--
+     ~ Label for Width.
+     ~ Position (1,0), Span (1,1)
+     -->
+    <Label text="Select Width"
+           GridPane.columnIndex="0" GridPane.columnSpan="1"
+           GridPane.rowIndex="1" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for width
+     ~ ID: width
+     ~ Position: (1,1)
+     ~ Span: (1,4)
+     -->
+    <TextField fx:id="width"
+               GridPane.columnIndex="1" GridPane.columnSpan="4"
+               GridPane.rowIndex="1" GridPane.rowSpan="1" />
+    <!--
+     ~ Label for Radius.
+     ~ Position (2,0), Span (1,1)
+     -->
+    <Label text="Select Radius"
+           GridPane.columnIndex="0" GridPane.columnSpan="1"
+           GridPane.rowIndex="2" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for radius
+     ~ ID: radius
+     ~ Position: (2,1)
+     ~ Span: (1,4)
+     -->
+    <TextField fx:id="radius"
+               GridPane.columnIndex="1" GridPane.columnSpan="4"
+               GridPane.rowIndex="2" GridPane.rowSpan="1" />
+    <!--
+     ~ Label for Height.
+     ~ Position (3,0), Span (1,1)
+     -->
+    <Label text="Select Height"
+           GridPane.columnIndex="0" GridPane.columnSpan="1"
+           GridPane.rowIndex="3" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for height
+     ~ ID: height
+     ~ Position: (3,1)
+     ~ Span: (1,4)
+     -->
+    <TextField fx:id="height"
+               GridPane.columnIndex="1" GridPane.columnSpan="4"
+               GridPane.rowIndex="3" GridPane.rowSpan="1" />
+    <!--
+     ~ Label for Minor Radius.
+     ~ Position (4,0), Span (1,1)
+     -->
+    <Label text="Select Minor Radius"
+           GridPane.columnIndex="0" GridPane.columnSpan="1"
+           GridPane.rowIndex="4" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for minor radius
+     ~ ID: minorRadius
+     ~ Position: (4,1)
+     ~ Span: (1,4)
+     -->
+    <TextField fx:id="minorRadius"
+               GridPane.columnIndex="1" GridPane.columnSpan="4"
+               GridPane.rowIndex="4" GridPane.rowSpan="1" />
+    <!--
+     ~ Button to draw the shape
+     ~ Action Handler: ParametersController.drawShape
+     ~ Position: (5,0)
+     ~ Span: (1,1)
+     -->
+    <Button onAction="#drawShape" text="Draw Shape"
+            GridPane.columnIndex="0" GridPane.columnSpan="1"
+            GridPane.rowIndex="5" GridPane.rowSpan="1" />
+    <!--
+     ~ Button to close the window
+     ~ Action Handler: ParametersController.close
+     ~ Position: (5,1)
+     ~ Span: (1,1)
+     -->
+    <Button onAction="#close" text="Go Back"
+            GridPane.columnIndex="1" GridPane.columnSpan="4"
+            GridPane.rowIndex="5" GridPane.rowSpan="1" />
+    <!--
+     ~ Text field for user choice
+     ~ This field is not visible to the user
+     ~ ID: choice
+     ~ Position: (1,1)
+     ~ Span: (1,1)
+     -->
+    <TextField fx:id="choice" visible="false"
+               GridPane.columnIndex="1" GridPane.columnSpan="1"
+               GridPane.rowIndex="1" GridPane.rowSpan="1" />
+</GridPane>

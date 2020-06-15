@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2020
+  ~ Project: DrawShape
+  ~ Filename: draw.fxml
+  ~ Class Name: /Users/nbonnin/IdeaProjects/DrawShape/src/Draw/draw.fxml
+  ~ Last Modified: 6/2/20, 9:53 AM
+  ~ Author: nbonnin (Naomi Bonnin)
+  ~ Project Description: This program presents the user with a series of shapes
+  ~ from which the user can choose.
+  ~ The user will then be prompted to enter the dimensions of their chosen shape.
+  ~ Finally, the program will attempt to display a spinning version of the
+  ~ chosen shape with the provided dimensions.
+  ~
+  -->
+
+<!--
+ ~ Imports needed to use JavaFX features
+-->
+<!--
+ ~ Creates the root element and defines it as a grid layout.
+ ~ Sets the JavaFX controller to be Draw.Controller.
+ ~ Sets the XML NameSpace to be the FXML standard.
+-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Draw.Controller">
+    <!--
+     ~ Columns Constraints are used here to prevent the need to declare
+     ~ the same parameters in each column.
+     ~ Increases the horizontal size of elements in a visually appealing way.
+     ~ Sets elements to be centered horizontally.
+     ~ By design there is 1 constraint for each column.
+    -->
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER"/>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER"/>
+        <ColumnConstraints hgrow="SOMETIMES" halignment="CENTER"/>
+    </columnConstraints>
+    <!--
+     ~ Row Constraints are used here to prevent the need to declare
+     ~ the same parameters in each row.
+     ~ Increases the vertical size in a visually appealing way.
+     ~ Sets the elements to be centered vertically.
+     ~ By design there is 1 constraint for each row
+    -->
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" valignment="CENTER"/>
+        <RowConstraints vgrow="SOMETIMES" valignment="CENTER"/>
+        <RowConstraints vgrow="SOMETIMES" valignment="CENTER"/>
+    </rowConstraints>
+    <!--
+     ~ Creates the Circle button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.circle
+     ~ Places the button position at (0,0) with a span of (1,1)
+     -->
+    <Button text="Circle" minWidth="80" onAction="#circle"
+            GridPane.columnIndex="0" GridPane.rowIndex="0"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Square button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.square
+     ~ Places the button position at (0,1) with a span of (1,1)
+     -->
+    <Button text="Square" minWidth="80" onAction="#square"
+            GridPane.columnIndex="1" GridPane.rowIndex="0"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Triangle button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.triangle
+     ~ Places the button position at (0,2) with a span of (1,1)
+     -->
+    <Button text="Triangle" minWidth="80" onAction="#triangle"
+            GridPane.columnIndex="2" GridPane.rowIndex="0"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Rectangle button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.rectangle
+     ~ Places the button position at (1,0) with a span of (1,1)
+     -->
+    <Button text="Rectangle" minWidth="80" onAction="#rectangle"
+            GridPane.columnIndex="0" GridPane.rowIndex="1"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Sphere button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.sphere
+     ~ Places the button position at (1,1) with a span of (1,1)
+     -->
+    <Button text="Sphere" minWidth="80" onAction="#sphere"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Cube button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.cube
+     ~ Places the button position at (1,2) with a span of (1,1)
+     -->
+    <Button text="Cube" minWidth="80" onAction="#cube"
+            GridPane.columnIndex="2" GridPane.rowIndex="1"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Cone button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.cone
+     ~ Places the button position at (2,0) with a span of (1,1)
+     -->
+    <Button text="Cone" minWidth="80" onAction="#cone"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Cylinder button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.cylinder
+     ~ Places the button position at (2,1) with a span of (1,1)
+     -->
+    <Button text="Cylinder" minWidth="80" onAction="#cylinder"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+    <!--
+     ~ Creates the Torus button.
+     ~ Defines a minimum width of 80p.
+     ~ Sets the Event Handler to be Controller.torus
+     ~ Places the button position at (2,2) with a span of (1,1)
+     -->
+    <Button text="Torus" minWidth="80" onAction="#torus"
+            GridPane.columnIndex="2" GridPane.rowIndex="2"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+</GridPane>
